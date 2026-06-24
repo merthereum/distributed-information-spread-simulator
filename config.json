@@ -1,0 +1,17 @@
+{
+  "nodes_count": 200,
+  "repeats": 10,
+  "fanout": 3,
+  "gossip_interval_ms": 5.0,
+  "timeout_ms": 1000.0,
+  "min_delay_ms": 0.6,
+  "max_delay_ms": 2.0,
+  "serialization_ms": 0.008,
+  "multicast_group_size": 20,
+  "scenarios": [
+    {"name": "S0: идеальная сеть", "packet_loss_probability": 0.0, "node_failure_probability": 0.0},
+    {"name": "S1: потеря пакетов 10%", "packet_loss_probability": 0.1, "node_failure_probability": 0.0},
+    {"name": "S2: потеря 20%, отказ 10%", "packet_loss_probability": 0.2, "node_failure_probability": 0.1},
+    {"name": "S3: потеря 30%, отказ 20%", "packet_loss_probability": 0.3, "node_failure_probability": 0.2}
+  ]
+}
